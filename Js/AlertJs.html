@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts</title>
+</head>
+<body>
+    <button type="button" onclick="display()">Alert Info</button>
+    <button type="button" onclick="getEmail()">Update Email</button>
+    <button type="button" onclick="googleSearch()">Google Search</button>
+    <script>
+        function display(){
+            alert('Welcome to js world!');
+        }
+        function getEmail(){
+            let email= prompt('Email id')
+            if(email != null){
+                alert(email + " registered !");
+            }
+        }
+        function googleSearch(){
+            let res= confirm('Are you sure to leave this page');
+            if(res== true){
+                window.location.assign("https://www.google.com");
+            }
+        }
+    </script>
+</body>
+</html>

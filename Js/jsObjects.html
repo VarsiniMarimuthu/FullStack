@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jsObjects</title>
+</head>
+<body>
+    <script>
+        const book = {
+            title: "JS Concepts",
+            author: "author-1",
+            price: 1250.00,
+            available: true
+        }
+        const emp = new Object();
+        emp.empname = "Employee-1";
+        emp.education = "B.TEch";
+        emp.age = 25;
+        emp.salary = 125000;
+
+        document.write("<br> Book Title:" +book.title);
+        document.write("<br> Author:" +book["author"]);
+        document.write("<hr>");
+        for(let k in emp){
+            document.write("<br>" + k + ":");
+            document.write(emp[k]);
+        }
+        console.log(emp);
+        document.write("<br>");
+        document.write(JSON.stringify(book));
+    </script>
+</body>
+</html>

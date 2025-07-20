@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Image</title>
+    <style>
+        @media screen and (min-width:400px){
+            body{
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+    <img
+      src="img/dog.jpg"
+      style="max-width: 100%; height: auto;"
+      alt="Dog image"
+    />
+
+    <h3>Responsive Image</h3>
+
+    <picture>
+        <source media="(min-width: 700px)" srcset="img/cat.jpg" />
+        <source media="(min-width: 450px)" srcset="img/panda.jpg" />
+        <source media="(min-width: 450px)" srcset="img/penguin.jpg" />
+        <img src="img/penguin.jpg" alt="penguin image" />
+    </picture>
+
+    <div style="height: 400px"></div>
+</body>
+</html>

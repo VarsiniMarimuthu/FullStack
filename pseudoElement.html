@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo-Elements</title>
+    <style>
+        li::marker{
+            color: red;
+        }
+        p::selection{
+            background-color: green;
+            color: white;
+        }
+        p::first-letter{
+            color:red;
+            font-size: x-large;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p::first-line{
+            color: green;
+        }
+        h4::after{
+            content:"😉";
+        }
+        h4::before{
+            content: "😎";
+        }
+    </style>
+</head>
+<body>
+        <li>item-1</li>
+        <li>item-2</li>
+        <li>item-3</li>
+        <li>item-4</li>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum officiis, veniam ea nemo, aut quia in impedit architecto sapiente non deleniti animi? Consectetur, dolor? Ad amet velit soluta unde ipsa illum blanditiis magni, tenetur labore accusamus placeat, obcaecati voluptates aliquam, eius a natus maxime expedita quasi maiores neque quisquam possimus.</p>
+    <h4>Welcome to Java FS Training</h4>
+</body>
+</html>

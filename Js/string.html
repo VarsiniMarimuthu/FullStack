@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    <script>
+        let st = "hello";
+        let st2 = new String("javascript");
+
+        document.write("<br> Length of Hello: " + st.length);
+        document.write("<br> chatAt(3): " + str.charAt(3));
+        document.write("<br> IndexOf('e') : " + st.indexOf('e'));
+        document.write("<br> lastindex: " + st.lastIndexOf('o'));
+
+        let txt1 = 'hai';
+        document.write("<br>" + txt1.length);
+        document.write("<br>" + txt1.trim().length);
+
+        txt1 = "123";
+        document.write("<br>" + txt1.padStart(5, "0"));
+        document.write("<br>" + txt1.padStart(5, "*"));
+        document.write("<br>" + txt1.padEnd(5, "#"));
+        document.write("<br>" + txt1.repeat(3));
+        stre = "KSRCT";
+        let tep = stre.replace("T", "E");
+        document.write("<br>original: " + stre);
+        document.write("<br>replaced: " + tep);
+
+        let tech = "html css js bs ";
+        t1 = tech.split(' ');
+        document.write("<br> " + t1[0]);
+        document.write("<br> " + t1[1]);
+        document.write("<br> " + t1[2]);
+
+        let studentdetail = "1234~studentname~BE";
+        t2 = studentdetail.split('~');
+        document.write("<br> " + t2[0]);
+        document.write("<br> " + t2[1]);
+        document.write("<br> " + t2[2]);
+
+        document.write("<br> " + stre.toUpperCase());
+        document.write("<br> " + stre.toLowerCase());
+
+        t2 = tech.substr(4, 12);
+        document.write("<br> " + t2);
+
+        t2 = tech.substr(6);
+        document.write("<br> " + t2);
+
+        t2 = tech.slice(4, 12);
+        document.write("<br> " + t2);
+
+        t2 = tech.substr(6);
+        document.write("<br> " + t2);
+    </script>
+</body>
+</html>

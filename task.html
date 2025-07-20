@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Layout</title>
+<style>
+  .rectangle {
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 600px;
+  }
+  .square {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .circle {
+    width: 90px;
+    height: 90px;
+    background-color: #a62df1;
+    border-radius: 50%;
+  }
+  .paragraph {
+    flex: 1;
+    padding: 0 20px;
+    font-size: 16px;
+  }
+</style>
+</head>
+<body>
+<div class="rectangle">
+  <div class="circle">
+  </div>
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, suscipit blanditiis? Tempora sequi reprehenderit dolorum architecto facere, nesciunt iusto sapiente harum. Ipsum minima nam non nemo aperiam fuga quo soluta ad, fugit modi dolore eveniet eaque obcaecati quod omnis, est error ipsa ducimus recusandae. Dolor reprehenderit voluptate magnam distinctio perspiciatis.
+  </div>
+</div>
+<div class="rectangle">
+  <div class="paragraph">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, eos. Excepturi modi, eius dolor tenetur soluta unde dignissimos, repellat, nostrum quae rem explicabo voluptas a ratione nobis consequatur! In, sint possimus excepturi laboriosam libero quae nemo porro fugiat blanditiis corrupti doloribus eius sed ex! Minus vitae nisi natus error ut?
+  </div>
+  <div class="square">
+    <div class="circle"></div>
+  </div>
+</div>
+
+</body>
+</html>

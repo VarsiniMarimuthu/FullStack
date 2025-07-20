@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form name="login">
+    <table>
+        <tr>
+            <td>Username:</td>
+            <td>
+                <input type="text" name="uname">
+            </td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td>
+                <input type="password" name="pass">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button type="button" onclick="validate()">Login</button>
+            </td>
+        </tr>
+        <tr>
+            <td  colspan="2">
+                <span id="info" style="color: red; font-size: x-large">
+                </span>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <input type="text" name="text1" onkeyup="display()"> <br>
+    <div id="result">
+
+    </div>
+    <br>
+    <input type="text" name="text2" onblur="display2()"> <br>
+    <div id="result2">
+
+    </div>
+    </form>
+    <script>
+        function display(){
+            let data=document.forms.login.text1.value;
+            document.getElementById("result").innerText= data;
+        }
+        function display2(){
+            let data=document.forms.login.text2.value;
+            document.getElementById("result2").innerText= data.toUpperCase();
+        }
+        function validate(){
+            let username=document.forms["login"]["uname"].value;
+            let password=document.forms.login.pass.value;
+            document.getElementById("info").innerText="";
+            if(username==""){
+                document.getElementById("info").innerText="User name is required";
+                return;
+            }
+            if(password==""){
+                document.getElementById("info").innerHTML="Password is required";
+                return;
+            }
+            if(username=="user" && password=="user123"){
+                 document.getElementById("info").style.color="green";
+                  document.getElementById("info").innerText="Login success";
+            }
+            else{
+                 document.getElementById("info").style.color="red";
+                  document.getElementById("info").innerText="Invalid username/ password !";
+            }
+        }
+    </script>
+</body>
+</html>

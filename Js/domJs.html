@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<body>
+    <h1>DOcument Object Model</h1>
+    <div id="div1" style="color: red;"></div>
+    <div class="test" style="color: blue;"></div>
+    <h2></h2>
+    <script>
+        let arr = ["html, css, js"];
+        document.getElementById("div1").innerText= arr;
+        document.getElementById("div1").innerText= "<h1>" +array.toString() + "<h1>";
+        document.getElementById("div1").innerHTML= "<h1>" +array.toString() + "<h1>";
+        let divs= document.getElementsByClassName("test");
+        divs[0].innerHTML="Welcome";
+        divs[1].innerHTML="Hello";
+        let heading2= document.getElementsByTagName("h2");
+        heading2[0].innerHTML="Hello world";
+        document.getElementsByName('text1')[0].value= "Hello World";
+        document.getElementsByName('text2')[0].value= document.getElementsByName('text1')[0].value= "Hello World";
+    </script>
+</body>
+</html>

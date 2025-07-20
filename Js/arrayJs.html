@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayJs</title>
+</head>
+<body>
+    <script>
+        let arr = ["html" , " css" , " js"];
+        let arr1 = [];
+            arr1[0] = "java";
+            arr1[1] = "python";
+            arr1[2] = "C#";
+        let temp = new Array();
+        temp.push(10);
+        temp.push(20);
+        document.write(temp.pop());
+
+        document.write(arr);
+        document.write("<br>");
+        document.write(typeof(arr));
+
+        let str = arr.toString();
+        document.write("<br>" + str);
+        document.write("<br>" + typeof(str));
+
+        document.write("<br> arr[0] : " + arr1[0]);
+
+        //iterate
+        document.write("<br> Size of the array : " + arr.length);
+
+        for(let index = 0; index < arr.length; index++){
+            document.write("<br> arr[" + index + "] : " + arr[index]);
+        }
+        document.write("<hr>");
+        for(let element of arr){
+            document.write("<br>" + element);
+        }
+    </script>
+</body>
+</html>

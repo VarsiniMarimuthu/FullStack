@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .container{
+            display: flex;
+            background-color: gray;
+        }
+        .container >section{
+            background-color: orange;
+            margin: 10px;
+            padding: 20px;
+            order: calc();
+        }
+        .container1{
+            display: flex;
+            background-color: green;
+            flex-direction: column-reverse;
+        }
+        .container1 >div{
+            background-color: orange;
+            margin: 20px;
+            padding: 10px;
+            color: white;
+            font-size: xx-large;
+        }
+        .grow1, .grow3, .grow4{
+            flex: basis 10px;
+        }
+        .grow2{
+            flex-grow: 8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>Section 1</section>
+        <section>Section 2</section>
+        <section>Section 3</section>
+        <section>Section 4</section>
+
+        <section class="grow1">Section 1</section>
+        <section class="grow2">Section 2</section>
+        <section class="grow3">Section 3</section>
+        <section class="grow4">Section 4</section>
+    </div>
+    <br><br>
+    <div class="container1">
+        <section>Section 1</section>
+        <section>Section 2</section>
+        <section>Section 3</section>
+        <section>Section 4</section>
+    </div>
+    
+</body>
+</html>

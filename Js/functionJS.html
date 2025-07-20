@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>functionJS</title>
+</head>
+<body>
+    <script>
+        //function definition
+        function display(){
+            document.write("<br>");
+        }
+        function greet(){
+            return "Hello All, Have a great day";
+        }
+        function doubleTheNum(num){
+            return num+num;
+        }
+        //function call
+        display();
+        document.writeln(greet());
+        document.write("<br>" +doubleTheNum(7));
+        //construct object
+
+        function student(name, regno, course){
+            this.name=name;
+            this.regno=regno;
+            this.course=course;
+        }
+        const std=new student("Varsini",1234,"BTech");
+        document.write("<br> Name:" +std.name);
+        document.write("<hr>")
+        for(let key in std){
+            document.write("<br>" + std[key]);
+        }
+        const employee={
+            firstname: "Varsini",
+            lastName: "Marimuthu",
+            fullname: function(){
+                document.write("<br> fullname:" +this.firstname +this.lastName);
+            }
+        }
+        employee.fullname();
+
+        //Arrow function
+        let greeting= () =>{
+            return "Hello all, welcome!"
+        }
+        let temp=() => "Hi all!";
+        document.write("<br>" +greeting());
+        document.write("<br>" +temp());
+
+        let greetings = (name) => "Hi, " + name + " Welcome";
+        document.write("<br>" +greetings("Varsini"));
+
+        let add = (num1,num2) => num1+num2;
+        document.write("<br>" +add(10,20));
+
+        let addition = a => a+100;
+        document.write("<br>" +addition(10))
+        //Math function
+        document.write("<br>" + Math.PI);
+        document.write("<br>" + Math.sqrt(144));
+        document.write("<br>" + Math.sin(0));
+        document.write("<br>" + Math.cos(0));
+        document.write("<br>" + Math.tan(0));
+        document.write("<br>" + Math.pow(2,3));
+        document.write("<br>" + Math.floor(123.9));
+        document.write("<br>" + Math.cell(123.3));
+        document.write("<br>" + Math.random());//Default => Ans: 0 to 1
+        document.write("<br>" + Math.random() * 9999);
+        document.write("<br>" + Math.round(Math.random() * 9999));
+        //generate OTP
+        function generateOTP(min , max){
+            return Math.floor(Math.random() * (max - min) + min);
+        }
+        document.write("<h3>" + generateOTP(1000,9999));
+        
+    </script>
+</body>
+</html>

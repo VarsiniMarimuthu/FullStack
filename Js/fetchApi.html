@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Api</title>
+</head>
+<body>
+    <button onclick="getJoke()">Get Facts</button>
+    <p id="JokeText">Click to get the joke</p>
+    <script>
+        async function getJoke(){
+            const joke=document.getElementById("JokeText");
+            JokeText.textContent="Loading....";
+            try {
+                const response= await fetch("https://meowfacts.herokuapp.com/");
+                console.log(response);
+                const data= await response.json();
+                console.log(data);
+                JokeText.textContent=data.data[0];
+            } catch (error) {
+                
+            }
+        }
+    </script>
+</body>
+</html>

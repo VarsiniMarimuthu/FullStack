@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compound Interest</title>
+</head>
+<body>
+    <h2>Compound Interest</h2>
+    <p id="result"></p>
+    <script>
+        // A = P * (1 + r/n)^(nt)
+        function compoundInterest(P, r, n, t) {
+            r = r / 100;
+            const A = P * Math.pow((1 + r / n), n * t);
+            return A.toFixed(2);
+        }
+        const principal = 1000; 
+        const rate = 5;   
+        const times = 4;      
+        const time = 2;
+        const result = compoundInterest(principal, rate, times, time);
+        document.getElementById("result").innerText = 
+            `Compound Amount after ${time} years = ₹${result}`;
+    </script>
+</body>
+</html>

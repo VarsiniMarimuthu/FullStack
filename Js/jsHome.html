@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1>Welcome</h1>
+    <button type="button" id="btnDate">Get Date</button>
+    <button type="button" onclick="getCurrentUrl()">Get URL</button>
+    <button type="button" onclick="getHost()">Get Host</button>
+    <button type="button" onclick="getPath()">Get Path</button>
+    <br><br>
+    <button type="button" onclick="display()">Alert Info</button>
+    <button type="button" onclick="getEmail()">Update Email</button>
+    <button type="button" onclick="googleSearch()">Google Search</button>
+    <span id="result"></span>
+    <h3>
+        <a href="loginJs.html">Signout</a>
+    </h3>
+    <script>
+        function display(){
+            alert('Welcome to js world!');
+        }
+        function getEmail(){
+            let email= prompt('Email id')
+            if(email != null){
+                alert(email + "registered !");
+            }
+        }
+        function googleSearch(){
+            let res= confirm('Are you sure to leave this page');
+            if(res== true){
+                window.location.assign("https://www.google.com");
+            }
+        }
+        document.getElementById("btnDate").addEventListener("click",showDate);
+        function showDate(){
+            document.getElementById("result").innerHTML=new Date().toLocaleDateString();
+        }
+        function getCurrentUrl(){
+            document.getElementById("result").innerHTML=window.location.href;
+        }
+        function getHost(){
+            document.getElementById("result").innerHTML=window.location.hostname;
+        }
+        function getPath(){
+            document.getElementById("result").innerHTML=window.location.pathname;
+        }
+
+    </script>
+</body>
+</html>

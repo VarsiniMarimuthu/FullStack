@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Form with Regex</title>
+    <style>
+        body { font-family: Arial; margin: 30px; }
+        label { display: block; margin-top: 10px; }
+        span { color: red; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <h2>Register Form</h2>
+
+    <form onsubmit="return validateForm()">
+        <label>Username:
+            <input type="text" id="username">
+            <span id="userError"></span>
+        </label>
+
+        <label>Email:
+            <input type="text" id="email">
+            <span id="emailError"></span>
+        </label>
+
+        <label>Password:
+            <input type="password" id="password">
+            <span id="passError"></span>
+        </label>
+
+        <label>Phone:
+            <input type="text" id="phone">
+            <span id="phoneError"></span>
+        </label>
+
+        <br><br>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            // Fetch values
+            let username = document.getElementById("username").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+
+            // RegEx patterns
+            let userPattern = /^[A-Za-z]{3,}$/;
+            let emailPattern = /^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+            let passPattern = /^(?=.*\d).{6,}$/;
+            let phonePattern = /^[0-9]{10}$/;
+
+            // Clear previous errors
+            document.getElementById("userError").innerText = "";
+            document.getElementById("emailError").innerText = "";
+            document.getElementById("passError").innerText = "";
+            document.getElementById("phoneError").innerText = "";
+
+            let valid = true;
+
+            // Username
+            if (!userPattern.test(username)) {
+                document.getElementById("userError").innerText = "Username must be letters only (min 3 characters)";
+                valid = false;
+            }
+
+            // Email
+            if (!emailPattern.test(email)) {
+                document.getElementById("emailError").innerText = "Enter a valid email";
+                valid = false;
+            }
+
+            // Password
+            if (!passPattern.test(password)) {
+                document.getElementById("passError").innerText = "Password must be at least 6 characters and contain a digit";
+                valid = false;
+            }
+
+            // Phone
+            if (!phonePattern.test(phone)) {
+                document.getElementById("phoneError").innerText = "Phone must be exactly 10 digits";
+                valid = false;
+            }
+
+            return valid;
+        }
+    </script>
+
+</body>
+</html>

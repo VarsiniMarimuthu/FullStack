@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dateJs</title>
+    <meta http-equiv="refresh" content="1"/>
+</head>
+<body>
+    <script>
+        const today = new Date();
+        document.write("<br>" + today);
+        document.write("<br>" + today.toString());
+        document.write("<br>" + today.toDateString());
+        document.write("<br>" + today.toLocalDateString());
+        document.write("<br>" + today.toTimeString());
+        document.write("<br>" + today.toUTCString());
+        document.write("<br>" + today.toLocalTimeString());
+        document.write("<br>" + today.toISOString());
+        document.write("<br> <h1 style = color:red;> Clock :" + today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds());
+            const examdate = new Date(10 , 12 , 25);
+            document.write("<br> exam date :" + examdate);
+    </script>
+</body>
+</html>

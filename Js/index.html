@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+    img{
+        height: 300px;
+        font-weight: 300px;
+    }
+  </style>
+</head>
+<body>
+    <h1>Welcome to js world</h1>
+    <script>
+        document.write("Hello word")
+        console.log("Script executed successfully")
+        document.write('<hr>')
+        document.write('<img src="img/panda.jpg">')
+
+        //variable declaration
+        let fname,lname;
+        var course,place;
+        const pincode=637211
+
+        //initializing variables
+        fname="kSR"
+        lname="CT";
+        course="Java FS"
+        place="Tiruchengode"
+        let email="ksrct@gmail.com"
+
+        //accessig variables
+        document.write("<br> Name of college:" +fname + lname);
+        document.write("<br> Place:" + place);
+        document.write("<br> Pin:" +pincode);
+        document.write("<br> Email:" + email);
+
+        //outside and inside scope
+        let num=123;
+        var x='abc';
+        {
+            var x='xtz';
+            let num=456;
+            document.write("<br> num inside block: " + num);
+            document.write("<br> x inside block: " + x);
+        }
+        document.write("<br><br> num outside block: " + num);
+        document.write("<br> x outside block: " + x);
+    </script>
+</body>
+</html>
