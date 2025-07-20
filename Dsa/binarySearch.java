@@ -12,7 +12,7 @@ class binarySearch{
             if(target<arr[mid]){
                 end=mid-1;
             }
-            else if{
+            else if(target > arr[mid]){
                 start=mid+1;
             }
             else{
