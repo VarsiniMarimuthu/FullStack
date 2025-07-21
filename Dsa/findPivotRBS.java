@@ -54,6 +54,4 @@ public class findPivotRBS {
         }
         return -1;
     }
-} {
-    
-}
+} 
