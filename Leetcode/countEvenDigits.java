@@ -1,7 +1,8 @@
-class countEvenNum{
-    public static void main(String[] args){
-        int[] arr = {2,4,2489,6,8,10};
-        System.out.print(checkNum(arr));
+//12 345 2 6 7896
+public class countEvenDigits {
+    public static void main(String[] args) {
+        int[] arr = {12, 345, 2, 6, 7896};
+        System.out.println(checkNum(arr));
     }
     static int checkNum(int[] arr){
         int count = 0;
